@@ -72,15 +72,47 @@
 		D4357A7521A99F94003EA666 /* SongBook */ = {
 			isa = PBXGroup;
 			children = (
-				D4357A7621A99F94003EA666 /* AppDelegate.swift */,
-				D4357A7821A99F94003EA666 /* HomeViewController.swift */,
-				D4357A8021A99F96003EA666 /* Assets.xcassets */,
-				D4357A8221A99F96003EA666 /* LaunchScreen.storyboard */,
-				D4357A8521A99F96003EA666 /* Info.plist */,
-				D4357A8B21A9A9D7003EA666 /* GoogleService-Info.plist */,
-				D4357A7D21A99F95003EA666 /* SongBook.xcdatamodeld */,
+				D4357A9021A9BBD9003EA666 /* View */,
+				D4357A8F21A9BBC7003EA666 /* Database */,
+				D4357A8E21A9BADC003EA666 /* Supporting files */,
+				D4357A8D21A9BA9B003EA666 /* CommonUtils */,
 			);
 			path = SongBook;
+			sourceTree = "<group>";
+		};
+		D4357A8D21A9BA9B003EA666 /* CommonUtils */ = {
+			isa = PBXGroup;
+			children = (
+				D4357A7621A99F94003EA666 /* AppDelegate.swift */,
+			);
+			path = CommonUtils;
+			sourceTree = "<group>";
+		};
+		D4357A8E21A9BADC003EA666 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				D4357A8221A99F96003EA666 /* LaunchScreen.storyboard */,
+				D4357A8B21A9A9D7003EA666 /* GoogleService-Info.plist */,
+				D4357A8521A99F96003EA666 /* Info.plist */,
+				D4357A8021A99F96003EA666 /* Assets.xcassets */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		D4357A8F21A9BBC7003EA666 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				D4357A7D21A99F95003EA666 /* SongBook.xcdatamodeld */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		D4357A9021A9BBD9003EA666 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D4357A7821A99F94003EA666 /* HomeViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		DCF2B4FBAE60283E1E93D61B /* Frameworks */ = {
@@ -278,7 +310,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -333,7 +365,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -350,8 +382,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A5GU43C3YM;
-				INFOPLIST_FILE = SongBook/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				INFOPLIST_FILE = "$(SRCROOT)/SongBook/Supporting files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mrrrnyaaa.SongBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -366,8 +402,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A5GU43C3YM;
-				INFOPLIST_FILE = SongBook/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				INFOPLIST_FILE = "$(SRCROOT)/SongBook/Supporting files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mrrrnyaaa.SongBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
