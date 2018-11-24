@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC74DCCA13D51719631BF92D /* Pods_SongBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBBEB5962E270B9F7AB831B6 /* Pods_SongBook.framework */; };
 		D4357A7721A99F94003EA666 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4357A7621A99F94003EA666 /* AppDelegate.swift */; };
-		D4357A7921A99F94003EA666 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4357A7821A99F94003EA666 /* ViewController.swift */; };
+		D4357A7921A99F94003EA666 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4357A7821A99F94003EA666 /* HomeViewController.swift */; };
 		D4357A7F21A99F95003EA666 /* SongBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4357A7D21A99F95003EA666 /* SongBook.xcdatamodeld */; };
 		D4357A8121A99F96003EA666 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4357A8021A99F96003EA666 /* Assets.xcassets */; };
 		D4357A8421A99F96003EA666 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4357A8221A99F96003EA666 /* LaunchScreen.storyboard */; };
+		D4357A8C21A9A9D7003EA666 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4357A8B21A9A9D7003EA666 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18B2E23A93B8A7264DAFBB7E /* Pods-SongBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SongBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-SongBook/Pods-SongBook.release.xcconfig"; sourceTree = "<group>"; };
+		436D8D80DEFE724CD1C957CA /* Pods-SongBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SongBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SongBook/Pods-SongBook.debug.xcconfig"; sourceTree = "<group>"; };
+		BBBEB5962E270B9F7AB831B6 /* Pods_SongBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SongBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4357A7321A99F94003EA666 /* SongBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SongBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4357A7621A99F94003EA666 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D4357A7821A99F94003EA666 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D4357A7821A99F94003EA666 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D4357A7E21A99F95003EA666 /* SongBook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SongBook.xcdatamodel; sourceTree = "<group>"; };
 		D4357A8021A99F96003EA666 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4357A8321A99F96003EA666 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4357A8521A99F96003EA666 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4357A8B21A9A9D7003EA666 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC74DCCA13D51719631BF92D /* Pods_SongBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B2DF84D272E999F16B3F027 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				436D8D80DEFE724CD1C957CA /* Pods-SongBook.debug.xcconfig */,
+				18B2E23A93B8A7264DAFBB7E /* Pods-SongBook.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D4357A6A21A99F94003EA666 = {
 			isa = PBXGroup;
 			children = (
 				D4357A7521A99F94003EA666 /* SongBook */,
 				D4357A7421A99F94003EA666 /* Products */,
+				5B2DF84D272E999F16B3F027 /* Pods */,
+				DCF2B4FBAE60283E1E93D61B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +73,22 @@
 			isa = PBXGroup;
 			children = (
 				D4357A7621A99F94003EA666 /* AppDelegate.swift */,
-				D4357A7821A99F94003EA666 /* ViewController.swift */,
+				D4357A7821A99F94003EA666 /* HomeViewController.swift */,
 				D4357A8021A99F96003EA666 /* Assets.xcassets */,
 				D4357A8221A99F96003EA666 /* LaunchScreen.storyboard */,
 				D4357A8521A99F96003EA666 /* Info.plist */,
+				D4357A8B21A9A9D7003EA666 /* GoogleService-Info.plist */,
 				D4357A7D21A99F95003EA666 /* SongBook.xcdatamodeld */,
 			);
 			path = SongBook;
+			sourceTree = "<group>";
+		};
+		DCF2B4FBAE60283E1E93D61B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBBEB5962E270B9F7AB831B6 /* Pods_SongBook.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4357A8821A99F96003EA666 /* Build configuration list for PBXNativeTarget "SongBook" */;
 			buildPhases = (
+				C50278D5E2E4153B862E6380 /* [CP] Check Pods Manifest.lock */,
 				D4357A6F21A99F94003EA666 /* Sources */,
 				D4357A7021A99F94003EA666 /* Frameworks */,
 				D4357A7121A99F94003EA666 /* Resources */,
+				83C3DB6EEE71BFDBA8A654C3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,10 +153,52 @@
 			files = (
 				D4357A8421A99F96003EA666 /* LaunchScreen.storyboard in Resources */,
 				D4357A8121A99F96003EA666 /* Assets.xcassets in Resources */,
+				D4357A8C21A9A9D7003EA666 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		83C3DB6EEE71BFDBA8A654C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SongBook/Pods-SongBook-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SongBook/Pods-SongBook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C50278D5E2E4153B862E6380 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SongBook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D4357A6F21A99F94003EA666 /* Sources */ = {
@@ -135,7 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4357A7F21A99F95003EA666 /* SongBook.xcdatamodeld in Sources */,
-				D4357A7921A99F94003EA666 /* ViewController.swift in Sources */,
+				D4357A7921A99F94003EA666 /* HomeViewController.swift in Sources */,
 				D4357A7721A99F94003EA666 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,15 +343,13 @@
 		};
 		D4357A8921A99F96003EA666 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 436D8D80DEFE724CD1C957CA /* Pods-SongBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A5GU43C3YM;
 				INFOPLIST_FILE = SongBook/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mrrrnyaaa.SongBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -290,15 +359,13 @@
 		};
 		D4357A8A21A99F96003EA666 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18B2E23A93B8A7264DAFBB7E /* Pods-SongBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A5GU43C3YM;
 				INFOPLIST_FILE = SongBook/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mrrrnyaaa.SongBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
