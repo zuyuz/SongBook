@@ -14,6 +14,7 @@
 		D4357A8121A99F96003EA666 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4357A8021A99F96003EA666 /* Assets.xcassets */; };
 		D4357A8421A99F96003EA666 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4357A8221A99F96003EA666 /* LaunchScreen.storyboard */; };
 		D4357A8C21A9A9D7003EA666 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4357A8B21A9A9D7003EA666 /* GoogleService-Info.plist */; };
+		D4357A9321A9BC54003EA666 /* IInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4357A9221A9BC54003EA666 /* IInitializer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D4357A8321A99F96003EA666 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4357A8521A99F96003EA666 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4357A8B21A9A9D7003EA666 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D4357A9221A9BC54003EA666 /* IInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IInitializer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		D4357A7521A99F94003EA666 /* SongBook */ = {
 			isa = PBXGroup;
 			children = (
+				D4357A9121A9BC27003EA666 /* Protocols */,
 				D4357A9021A9BBD9003EA666 /* View */,
 				D4357A8F21A9BBC7003EA666 /* Database */,
 				D4357A8E21A9BADC003EA666 /* Supporting files */,
@@ -113,6 +116,14 @@
 				D4357A7821A99F94003EA666 /* HomeViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D4357A9121A9BC27003EA666 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D4357A9221A9BC54003EA666 /* IInitializer.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		DCF2B4FBAE60283E1E93D61B /* Frameworks */ = {
@@ -241,6 +252,7 @@
 			files = (
 				D4357A7F21A99F95003EA666 /* SongBook.xcdatamodeld in Sources */,
 				D4357A7921A99F94003EA666 /* HomeViewController.swift in Sources */,
+				D4357A9321A9BC54003EA666 /* IInitializer.swift in Sources */,
 				D4357A7721A99F94003EA666 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
