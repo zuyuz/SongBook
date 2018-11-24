@@ -6,5 +6,6 @@ target 'SongBook' do
   use_frameworks!
 
   # Pods for SongBook
+    pod 'SnapKit'
     pod 'Firebase/Core'
 end
