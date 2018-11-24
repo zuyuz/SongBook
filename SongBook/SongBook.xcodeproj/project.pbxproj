@@ -17,6 +17,7 @@
 		D4357A9321A9BC54003EA666 /* IInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4357A9221A9BC54003EA666 /* IInitializer.swift */; };
 		D4357A9521A9BD1F003EA666 /* InitializableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4357A9421A9BD1F003EA666 /* InitializableViewController.swift */; };
 		D4357A9721A9BF4A003EA666 /* HomeScreenInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4357A9621A9BF4A003EA666 /* HomeScreenInitializer.swift */; };
+		D4357A9B21A9C8C6003EA666 /* Common.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4357A9A21A9C8C6003EA666 /* Common.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		D4357A9221A9BC54003EA666 /* IInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IInitializer.swift; sourceTree = "<group>"; };
 		D4357A9421A9BD1F003EA666 /* InitializableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializableViewController.swift; sourceTree = "<group>"; };
 		D4357A9621A9BF4A003EA666 /* HomeScreenInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenInitializer.swift; sourceTree = "<group>"; };
+		D4357A9A21A9C8C6003EA666 /* Common.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Common.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		D4357A7521A99F94003EA666 /* SongBook */ = {
 			isa = PBXGroup;
 			children = (
+				D4357A9821A9C844003EA666 /* Resources */,
 				D4357A9121A9BC27003EA666 /* Protocols */,
 				D4357A9021A9BBD9003EA666 /* View */,
 				D4357A8F21A9BBC7003EA666 /* Database */,
@@ -130,6 +133,22 @@
 				D4357A9221A9BC54003EA666 /* IInitializer.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D4357A9821A9C844003EA666 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D4357A9921A9C875003EA666 /* Common */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D4357A9921A9C875003EA666 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D4357A9A21A9C8C6003EA666 /* Common.xcassets */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		DCF2B4FBAE60283E1E93D61B /* Frameworks */ = {
@@ -200,6 +219,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4357A9B21A9C8C6003EA666 /* Common.xcassets in Resources */,
 				D4357A8421A99F96003EA666 /* LaunchScreen.storyboard in Resources */,
 				D4357A8121A99F96003EA666 /* Assets.xcassets in Resources */,
 				D4357A8C21A9A9D7003EA666 /* GoogleService-Info.plist in Resources */,

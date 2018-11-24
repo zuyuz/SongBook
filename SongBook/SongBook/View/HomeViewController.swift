@@ -20,4 +20,3 @@ class HomeViewController: InitializableViewController {
         uiInilializer.initialize()
     }
 }
-
