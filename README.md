@@ -9,3 +9,9 @@ You can write your own songs, collect and store favorite lyrics, choose the fanc
 
 ## Creators
 Mrrrnyaaa team
+
+## Functional spec (uml, db scheme)
+We are using firebase real-time database (No SQL) for saving users and generated song books.
+
+## Security model
+Auth is managed through firebase auth
