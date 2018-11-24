@@ -15,6 +15,7 @@
 		D4357A8421A99F96003EA666 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4357A8221A99F96003EA666 /* LaunchScreen.storyboard */; };
 		D4357A8C21A9A9D7003EA666 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4357A8B21A9A9D7003EA666 /* GoogleService-Info.plist */; };
 		D4357A9321A9BC54003EA666 /* IInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4357A9221A9BC54003EA666 /* IInitializer.swift */; };
+		D4357A9521A9BD1F003EA666 /* InitializableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4357A9421A9BD1F003EA666 /* InitializableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		D4357A8521A99F96003EA666 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4357A8B21A9A9D7003EA666 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D4357A9221A9BC54003EA666 /* IInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IInitializer.swift; sourceTree = "<group>"; };
+		D4357A9421A9BD1F003EA666 /* InitializableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				D4357A7621A99F94003EA666 /* AppDelegate.swift */,
+				D4357A9421A9BD1F003EA666 /* InitializableViewController.swift */,
 			);
 			path = CommonUtils;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				D4357A7F21A99F95003EA666 /* SongBook.xcdatamodeld in Sources */,
 				D4357A7921A99F94003EA666 /* HomeViewController.swift in Sources */,
 				D4357A9321A9BC54003EA666 /* IInitializer.swift in Sources */,
+				D4357A9521A9BD1F003EA666 /* InitializableViewController.swift in Sources */,
 				D4357A7721A99F94003EA666 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
