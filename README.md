@@ -29,5 +29,5 @@ Authentication is managed through the Firebase Auth. Screenshots for the auth co
 ## Hosting service
 Our application may be uploaded to the AppStore.
 
-##Monitoring & Telemetery
+## Monitoring & Telemetery
 We use Firebase Analytics and Crashlytics to monitor database, cloud functions and app usage and also to receive detailed reports of the errors in your SongBook application. You can find screenshots in the /Analytics folder.
