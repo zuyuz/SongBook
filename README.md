@@ -1,7 +1,7 @@
 # SongBook
 
 ## Description
-Application that allows to create your own songbook easily. 
+Application that allows you to create your own songbook easily. 
 You can write your own songs, collect and store favorite lyrics, choose the fanciest design and print them out.
 
 ## UML Diagram 
@@ -11,20 +11,23 @@ You can write your own songs, collect and store favorite lyrics, choose the fanc
 Mrrrnyaaa team
 
 ## Database
-We are using firebase real-time database (No SQL) for saving users and generated song books.
-Data consist of 2 parts: 
+We use a Firebase Realtime Database (No SQL) for saving users and generated songbooks.
+Data consists of 2 parts: 
  - User database: 
     Includes all application users.
  - Application database: 
     Includes user generated JSON objects. 
     Each object includes:
-      - Songs texts (as list)
+      - List of songs' lyrics
       - Number of songs
 
  
 
-## Security model
-Auth is managed through firebase auth. Find images, in security folder, for auth configuration pages.
+## Security
+Authentication is managed through the Firebase Auth. Screenshots for the auth configuration pages are located in the /Security folder.
 
-## Hosted service
+## Hosting service
 Our application may be uploaded to the AppStore.
+
+##Monitoring & Telemetery
+We use Firebase Analytics and Crashlytics to monitor database, cloud functions and app usage and also to receive detailed reports of the errors in your SongBook application. You can find screenshots in the /Analytics folder.
