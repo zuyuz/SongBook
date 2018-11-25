@@ -25,3 +25,6 @@ Data consist of 2 parts:
 
 ## Security model
 Auth is managed through firebase auth. Find images, in security folder, for auth configuration pages.
+
+## Hosted service
+Our application may be uploaded to the AppStore.
