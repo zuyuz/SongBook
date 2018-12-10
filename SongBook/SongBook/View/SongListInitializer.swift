@@ -1,5 +1,5 @@
 //
-//  HomeScreenInitializer.swift
+//  SongListInitializer.swift
 //  SongBook
 //
 //  Created by JuliaZvizlo on 11/24/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeScreenInitializer: IInitializer {
+class SongListInitializer: IInitializer {
 
     private unowned var controller: SongListViewController
     

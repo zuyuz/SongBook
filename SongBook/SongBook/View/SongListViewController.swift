@@ -10,8 +10,8 @@ import UIKit
 
 class SongListViewController: InitializableViewController {
 
-    lazy var uiInilializer: HomeScreenInitializer = { [unowned self] in
-        let initializer = HomeScreenInitializer(viewController: self)
+    lazy var uiInilializer: SongListInitializer = { [unowned self] in
+        let initializer = SongListInitializer(viewController: self)
         return initializer
     }()
     
