@@ -10,6 +10,8 @@ import UIKit
 
 class SongListViewController: InitializableViewController {
 
+    var tableView: UITableView!
+    
     lazy var uiInilializer: SongListInitializer = { [unowned self] in
         let initializer = SongListInitializer(viewController: self)
         return initializer

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class SongListInitializer: IInitializer {
 
@@ -19,5 +20,24 @@ class SongListInitializer: IInitializer {
     func initialize() {
         controller.view.backgroundColor = .white
         controller.navigationController?.isNavigationBarHidden = true
+        addTableView()
+    }
+    
+    private func addTableView() {
+        let tableView = UITableView()
+        tableView.allowsSelection = false
+        tableView.separatorStyle = .singleLine
+        tableView.separatorInset = .zero
+        tableView.backgroundColor = .clear
+        tableView.isMultipleTouchEnabled = false
+        controller.view.addSubview(tableView)
+        tableView.snp.makeConstraints { maker in
+            maker.leading.equalToSuperview()
+            maker.trailing.equalToSuperview()
+            maker.top.equalToSuperview()
+            maker.bottom.equalToSuperview()
+        }
+        
+        controller.tableView = tableView
     }
 }
