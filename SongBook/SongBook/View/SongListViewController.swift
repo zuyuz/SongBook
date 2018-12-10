@@ -30,7 +30,31 @@ class SongListViewController: InitializableViewController {
     }
     
     @objc func addSongButtonClicked(_ sender: UIButton) {
+        hideNavigationBar()
+        showSong()
+    }
+    
+    private func showSong() {
+        let songView = SongView()
+        self.view.addSubview(songView)
+        songView.snp.makeConstraints { maker in
+            maker.leading.equalToSuperview()
+            maker.top.equalToSuperview()
+            maker.trailing.equalToSuperview()
+            maker.bottom.equalToSuperview()
+        }
         
+        songView.setupSubviews()
+        self.view.bringSubviewToFront(songView)
+        songView.titleTextField.becomeFirstResponder()
+    }
+    
+    private func hideNavigationBar() {
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    private func showNavigationBar() {
+        self.navigationController?.isNavigationBarHidden = false
     }
 }
 

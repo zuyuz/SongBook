@@ -13,12 +13,12 @@ class SongModel {
     let id: Int
     let title: String
     let author: String
-    let text: String
+    let lyrics: String
     
-    init(id: Int, title: String, author: String, text: String) {
+    init(id: Int, title: String, author: String, lyrics: String) {
         self.id = id
         self.title = title
         self.author = author
-        self.text = text
+        self.lyrics = lyrics
     }
 }

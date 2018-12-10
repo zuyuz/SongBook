@@ -13,6 +13,7 @@
 		D414499021BEA674005FDB67 /* SongListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D414498F21BEA674005FDB67 /* SongListViewModel.swift */; };
 		D414499721BEA995005FDB67 /* SongListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D414499621BEA995005FDB67 /* SongListTableViewDataSource.swift */; };
 		D414499921BEAB17005FDB67 /* SongListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D414499821BEAB17005FDB67 /* SongListBuilder.swift */; };
+		D414499C21BEB96C005FDB67 /* SongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D414499B21BEB96C005FDB67 /* SongView.swift */; };
 		D4357A7721A99F94003EA666 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4357A7621A99F94003EA666 /* AppDelegate.swift */; };
 		D4357A7921A99F94003EA666 /* SongListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4357A7821A99F94003EA666 /* SongListViewController.swift */; };
 		D4357A7F21A99F95003EA666 /* SongBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4357A7D21A99F95003EA666 /* SongBook.xcdatamodeld */; };
@@ -34,6 +35,7 @@
 		D414498F21BEA674005FDB67 /* SongListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListViewModel.swift; sourceTree = "<group>"; };
 		D414499621BEA995005FDB67 /* SongListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListTableViewDataSource.swift; sourceTree = "<group>"; };
 		D414499821BEAB17005FDB67 /* SongListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListBuilder.swift; sourceTree = "<group>"; };
+		D414499B21BEB96C005FDB67 /* SongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongView.swift; sourceTree = "<group>"; };
 		D4357A7321A99F94003EA666 /* SongBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SongBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4357A7621A99F94003EA666 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4357A7821A99F94003EA666 /* SongListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				D414499121BEA88C005FDB67 /* TableView */,
 				D4357A7821A99F94003EA666 /* SongListViewController.swift */,
 				D4357A9621A9BF4A003EA666 /* SongListInitializer.swift */,
+				D414499B21BEB96C005FDB67 /* SongView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				D414499021BEA674005FDB67 /* SongListViewModel.swift in Sources */,
 				D4357A7F21A99F95003EA666 /* SongBook.xcdatamodeld in Sources */,
 				D4357A7921A99F94003EA666 /* SongListViewController.swift in Sources */,
+				D414499C21BEB96C005FDB67 /* SongView.swift in Sources */,
 				D414498D21BEA5AB005FDB67 /* SongModel.swift in Sources */,
 				D414498921BEA326005FDB67 /* IUIUpdatable.swift in Sources */,
 				D4357A9321A9BC54003EA666 /* IInitializer.swift in Sources */,
