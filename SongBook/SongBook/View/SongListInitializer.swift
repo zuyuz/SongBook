@@ -19,7 +19,7 @@ class SongListInitializer: IInitializer {
     
     func initialize() {
         controller.view.backgroundColor = .white
-        controller.navigationController?.isNavigationBarHidden = true
+        controller.title = "Songs"
         addTableView()
     }
     

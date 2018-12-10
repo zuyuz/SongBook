@@ -25,7 +25,12 @@ class SongListViewController: InitializableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         uiInilializer.initialize()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addSongButtonClicked(_:)))
         tableView.dataSource = tableDataSource
+    }
+    
+    @objc func addSongButtonClicked(_ sender: UIButton) {
+        
     }
 }
 
