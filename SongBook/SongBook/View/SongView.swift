@@ -19,6 +19,9 @@ class SongView: UIView {
     var saveButton: UIButton!
     var cancelButton: UIButton!
     
+    var cancelSong: (() -> Void)?
+    var saveSong: ((SongModel) -> Void)?
+    
     func setupSubviews() {
         backgroundColor = .white
         addTitleLabel()
@@ -29,6 +32,8 @@ class SongView: UIView {
         addLyricsTextView()
         addSaveButton()
         addCancelButton()
+        cancelButton.addTarget(self, action: #selector(cancelButtonClicked(_:)), for: .touchUpInside)
+        saveButton.addTarget(self, action: #selector(saveButtonClicked(_:)), for: .touchUpInside)
     }
     
     func configure(with songModel: SongModel) {
@@ -197,5 +202,14 @@ class SongView: UIView {
         }
         
         cancelButton = button
+    }
+    
+    @objc private func cancelButtonClicked(_ sender: UIButton) {
+        cancelSong?()
+    }
+    
+    @objc private func saveButtonClicked(_ sender: UIButton) {
+        let song = SongModel(id: 0, title: titleTextField.text ?? "", author: authorTextField.text ?? "", lyrics: lyricsTextView.text)
+        saveSong?(song)
     }
 }

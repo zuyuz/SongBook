@@ -17,10 +17,17 @@ class SongListViewController: InitializableViewController {
     
     var viewModel: SongListViewModel!
     
+    var songView: SongView!
+    
     lazy var uiInilializer: SongListInitializer = { [unowned self] in
         let initializer = SongListInitializer(viewController: self)
         return initializer
     }()
+    
+    lazy var cancelSong: (() -> Void) = { [weak self] in
+        self?.songView.removeFromSuperview()
+        self?.showNavigationBar()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +42,7 @@ class SongListViewController: InitializableViewController {
     }
     
     private func showSong() {
-        let songView = SongView()
+        songView = SongView()
         self.view.addSubview(songView)
         songView.snp.makeConstraints { maker in
             maker.leading.equalToSuperview()
@@ -45,6 +52,7 @@ class SongListViewController: InitializableViewController {
         }
         
         songView.setupSubviews()
+        songView.cancelSong = cancelSong
         self.view.bringSubviewToFront(songView)
         songView.titleTextField.becomeFirstResponder()
     }
