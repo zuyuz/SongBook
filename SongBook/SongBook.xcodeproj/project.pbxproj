@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BC74DCCA13D51719631BF92D /* Pods_SongBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBBEB5962E270B9F7AB831B6 /* Pods_SongBook.framework */; };
 		D414498921BEA326005FDB67 /* IUIUpdatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D414498821BEA326005FDB67 /* IUIUpdatable.swift */; };
+		D414498D21BEA5AB005FDB67 /* SongModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D414498C21BEA5AB005FDB67 /* SongModel.swift */; };
 		D4357A7721A99F94003EA666 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4357A7621A99F94003EA666 /* AppDelegate.swift */; };
 		D4357A7921A99F94003EA666 /* SongListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4357A7821A99F94003EA666 /* SongListViewController.swift */; };
 		D4357A7F21A99F95003EA666 /* SongBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4357A7D21A99F95003EA666 /* SongBook.xcdatamodeld */; };
@@ -26,6 +27,7 @@
 		436D8D80DEFE724CD1C957CA /* Pods-SongBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SongBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SongBook/Pods-SongBook.debug.xcconfig"; sourceTree = "<group>"; };
 		BBBEB5962E270B9F7AB831B6 /* Pods_SongBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SongBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D414498821BEA326005FDB67 /* IUIUpdatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IUIUpdatable.swift; sourceTree = "<group>"; };
+		D414498C21BEA5AB005FDB67 /* SongModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongModel.swift; sourceTree = "<group>"; };
 		D4357A7321A99F94003EA666 /* SongBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SongBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4357A7621A99F94003EA666 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4357A7821A99F94003EA666 /* SongListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,14 @@
 				18B2E23A93B8A7264DAFBB7E /* Pods-SongBook.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D414498B21BEA595005FDB67 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D414498C21BEA5AB005FDB67 /* SongModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		D4357A6A21A99F94003EA666 = {
@@ -141,6 +151,7 @@
 		D4357A9821A9C844003EA666 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D414498B21BEA595005FDB67 /* Model */,
 				D4357A9921A9C875003EA666 /* Common */,
 			);
 			path = Resources;
@@ -281,6 +292,7 @@
 			files = (
 				D4357A7F21A99F95003EA666 /* SongBook.xcdatamodeld in Sources */,
 				D4357A7921A99F94003EA666 /* SongListViewController.swift in Sources */,
+				D414498D21BEA5AB005FDB67 /* SongModel.swift in Sources */,
 				D414498921BEA326005FDB67 /* IUIUpdatable.swift in Sources */,
 				D4357A9321A9BC54003EA666 /* IInitializer.swift in Sources */,
 				D4357A9721A9BF4A003EA666 /* SongListInitializer.swift in Sources */,
