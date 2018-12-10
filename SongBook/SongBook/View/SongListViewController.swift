@@ -9,10 +9,13 @@
 import UIKit
 
 class SongListViewController: InitializableViewController {
-
-    var tableView: UITableView!
     
     private var spinner: UIActivityIndicatorView?
+    
+    var tableView: UITableView!
+    var tableDataSource: SongListTableViewDataSource!
+    
+    var viewModel: SongListViewModel!
     
     lazy var uiInilializer: SongListInitializer = { [unowned self] in
         let initializer = SongListInitializer(viewController: self)
@@ -22,6 +25,7 @@ class SongListViewController: InitializableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         uiInilializer.initialize()
+        tableView.dataSource = tableDataSource
     }
 }
 
