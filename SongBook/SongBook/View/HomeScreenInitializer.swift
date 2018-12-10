@@ -10,9 +10,9 @@ import UIKit
 
 class HomeScreenInitializer: IInitializer {
 
-    private unowned var controller: HomeViewController
+    private unowned var controller: SongListViewController
     
-    init(viewController: HomeViewController) {
+    init(viewController: SongListViewController) {
         controller = viewController
     }
     

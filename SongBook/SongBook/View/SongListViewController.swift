@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  SongListViewController.swift
 //  SongBook
 //
 //  Created by JuliaZvizlo on 11/24/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: InitializableViewController {
+class SongListViewController: InitializableViewController {
 
     lazy var uiInilializer: HomeScreenInitializer = { [unowned self] in
         let initializer = HomeScreenInitializer(viewController: self)

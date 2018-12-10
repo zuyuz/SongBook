@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		BC74DCCA13D51719631BF92D /* Pods_SongBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBBEB5962E270B9F7AB831B6 /* Pods_SongBook.framework */; };
 		D4357A7721A99F94003EA666 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4357A7621A99F94003EA666 /* AppDelegate.swift */; };
-		D4357A7921A99F94003EA666 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4357A7821A99F94003EA666 /* HomeViewController.swift */; };
+		D4357A7921A99F94003EA666 /* SongListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4357A7821A99F94003EA666 /* SongListViewController.swift */; };
 		D4357A7F21A99F95003EA666 /* SongBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4357A7D21A99F95003EA666 /* SongBook.xcdatamodeld */; };
 		D4357A8121A99F96003EA666 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4357A8021A99F96003EA666 /* Assets.xcassets */; };
 		D4357A8421A99F96003EA666 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4357A8221A99F96003EA666 /* LaunchScreen.storyboard */; };
@@ -26,7 +26,7 @@
 		BBBEB5962E270B9F7AB831B6 /* Pods_SongBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SongBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4357A7321A99F94003EA666 /* SongBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SongBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4357A7621A99F94003EA666 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D4357A7821A99F94003EA666 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D4357A7821A99F94003EA666 /* SongListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListViewController.swift; sourceTree = "<group>"; };
 		D4357A7E21A99F95003EA666 /* SongBook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SongBook.xcdatamodel; sourceTree = "<group>"; };
 		D4357A8021A99F96003EA666 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4357A8321A99F96003EA666 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 		D4357A9021A9BBD9003EA666 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D4357A7821A99F94003EA666 /* HomeViewController.swift */,
+				D4357A7821A99F94003EA666 /* SongListViewController.swift */,
 				D4357A9621A9BF4A003EA666 /* HomeScreenInitializer.swift */,
 			);
 			path = View;
@@ -277,7 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4357A7F21A99F95003EA666 /* SongBook.xcdatamodeld in Sources */,
-				D4357A7921A99F94003EA666 /* HomeViewController.swift in Sources */,
+				D4357A7921A99F94003EA666 /* SongListViewController.swift in Sources */,
 				D4357A9321A9BC54003EA666 /* IInitializer.swift in Sources */,
 				D4357A9721A9BF4A003EA666 /* HomeScreenInitializer.swift in Sources */,
 				D4357A9521A9BD1F003EA666 /* InitializableViewController.swift in Sources */,
