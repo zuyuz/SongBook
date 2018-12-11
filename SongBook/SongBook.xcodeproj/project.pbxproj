@@ -19,6 +19,7 @@
 		D4258A9521BFB4E5001C2E38 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4258A9421BFB4E5001C2E38 /* CoreDataManager.swift */; };
 		D4258A9721BFB544001C2E38 /* SongProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4258A9621BFB544001C2E38 /* SongProxy.swift */; };
 		D4258A9A21BFB75A001C2E38 /* SongDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4258A9921BFB75A001C2E38 /* SongDataProvider.swift */; };
+		D4258A9D21C0117B001C2E38 /* SongListTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4258A9C21C0117B001C2E38 /* SongListTableViewDelegate.swift */; };
 		D4357A7721A99F94003EA666 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4357A7621A99F94003EA666 /* AppDelegate.swift */; };
 		D4357A7921A99F94003EA666 /* SongListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4357A7821A99F94003EA666 /* SongListViewController.swift */; };
 		D4357A7F21A99F95003EA666 /* SongBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4357A7D21A99F95003EA666 /* SongBook.xcdatamodeld */; };
@@ -46,6 +47,7 @@
 		D4258A9421BFB4E5001C2E38 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		D4258A9621BFB544001C2E38 /* SongProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongProxy.swift; sourceTree = "<group>"; };
 		D4258A9921BFB75A001C2E38 /* SongDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDataProvider.swift; sourceTree = "<group>"; };
+		D4258A9C21C0117B001C2E38 /* SongListTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListTableViewDelegate.swift; sourceTree = "<group>"; };
 		D4357A7321A99F94003EA666 /* SongBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SongBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4357A7621A99F94003EA666 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4357A7821A99F94003EA666 /* SongListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 		D414499121BEA88C005FDB67 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				D4258A9B21C0115B001C2E38 /* Delegate */,
 				D414499521BEA94F005FDB67 /* DataSource */,
 			);
 			path = TableView;
@@ -144,6 +147,14 @@
 				D4258A9921BFB75A001C2E38 /* SongDataProvider.swift */,
 			);
 			path = DataProviders;
+			sourceTree = "<group>";
+		};
+		D4258A9B21C0115B001C2E38 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				D4258A9C21C0117B001C2E38 /* SongListTableViewDelegate.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		D4357A6A21A99F94003EA666 = {
@@ -386,6 +397,7 @@
 				D4258A9321BFB448001C2E38 /* BaseCoreDataProxy.swift in Sources */,
 				D414498D21BEA5AB005FDB67 /* SongModel.swift in Sources */,
 				D414498921BEA326005FDB67 /* IUIUpdatable.swift in Sources */,
+				D4258A9D21C0117B001C2E38 /* SongListTableViewDelegate.swift in Sources */,
 				D4258A9021BFAF55001C2E38 /* String+Extension.swift in Sources */,
 				D4357A9321A9BC54003EA666 /* IInitializer.swift in Sources */,
 				D4357A9721A9BF4A003EA666 /* SongListInitializer.swift in Sources */,
@@ -536,7 +548,10 @@
 				DEVELOPMENT_TEAM = A5GU43C3YM;
 				INFOPLIST_FILE = "$(SRCROOT)/SongBook/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mrrrnyaaa.SongBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -553,7 +568,10 @@
 				DEVELOPMENT_TEAM = A5GU43C3YM;
 				INFOPLIST_FILE = "$(SRCROOT)/SongBook/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mrrrnyaaa.SongBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

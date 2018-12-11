@@ -25,7 +25,6 @@ class SongListInitializer: IInitializer {
     
     private func addTableView() {
         let tableView = UITableView()
-        tableView.allowsSelection = false
         tableView.separatorStyle = .singleLine
         tableView.separatorInset = .zero
         tableView.backgroundColor = .clear

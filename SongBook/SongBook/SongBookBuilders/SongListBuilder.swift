@@ -18,6 +18,8 @@ class SongListBuilder {
         vc.viewModel = songsVM
         let dataSource = SongListTableViewDataSource(with: songsVM)
         vc.tableDataSource = dataSource
+        let delegate = SongListTableViewDelegate()
+        vc.tableDelegate = delegate
         
         return vc
     }
