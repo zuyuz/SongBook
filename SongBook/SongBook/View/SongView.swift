@@ -10,14 +10,14 @@ import UIKit
 
 class SongView: UIView {
 
-    var titleLabel: UILabel!
+    private var titleLabel: UILabel!
     var titleTextField: UITextField!
-    var authorLabel: UILabel!
+    private var authorLabel: UILabel!
     var authorTextField: UITextField!
-    var lyricsLabel: UILabel!
+    private var lyricsLabel: UILabel!
     var lyricsTextView: UITextView!
-    var saveButton: UIButton!
-    var cancelButton: UIButton!
+    private var saveButton: UIButton!
+    private var cancelButton: UIButton!
     
     var cancelSong: (() -> Void)?
     var saveSong: ((SongModel) -> Void)?

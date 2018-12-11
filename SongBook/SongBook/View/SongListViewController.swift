@@ -29,6 +29,10 @@ class SongListViewController: InitializableViewController {
         self?.showNavigationBar()
     }
     
+    lazy var saveSong: ((SongModel) -> Void) = { [weak self] song in
+        self?.validate(song)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         uiInilializer.initialize()
@@ -38,10 +42,10 @@ class SongListViewController: InitializableViewController {
     
     @objc func addSongButtonClicked(_ sender: UIButton) {
         hideNavigationBar()
-        showSong()
+        showSongView()
     }
     
-    private func showSong() {
+    private func showSongView() {
         songView = SongView()
         self.view.addSubview(songView)
         songView.snp.makeConstraints { maker in
@@ -53,8 +57,24 @@ class SongListViewController: InitializableViewController {
         
         songView.setupSubviews()
         songView.cancelSong = cancelSong
+        songView.saveSong = saveSong
         self.view.bringSubviewToFront(songView)
         songView.titleTextField.becomeFirstResponder()
+    }
+    
+    private func validate(_ song: SongModel) -> Bool {
+        guard let title = songView.titleTextField.text else { return false }
+        
+        let trimmedTitle = title.removingWhitespaces()
+        
+        let error = "Field cannot be empty"
+        
+        if trimmedTitle.isEmpty {
+            songView.titleTextField.attributedPlaceholder = NSAttributedString(string: error, attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
+            return false
+        }
+        
+        return true
     }
     
     private func hideNavigationBar() {
