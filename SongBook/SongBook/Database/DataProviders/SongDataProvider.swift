@@ -17,7 +17,7 @@ struct SongData {
 
 class SongDataProvider {
     
-    func fetchSongsFromFirebase(with id: Int) {
+    func fetchSongsFromFirebase() {
         let ref = Database.database().reference().root.child("songs")
         ref.observeSingleEvent(of: .value, with: { snapshot in
             if snapshot.exists() {

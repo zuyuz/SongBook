@@ -21,7 +21,7 @@ class SongListTableViewDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
         if let song = viewModel.song(at: indexPath) {
             cell.textLabel?.text = song.title
             cell.detailTextLabel?.text = song.author

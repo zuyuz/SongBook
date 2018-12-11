@@ -12,6 +12,8 @@ class SongListBuilder {
     
     func createController() -> SongListViewController {
         let vc = SongListViewController()
+        let provider = SongDataProvider()
+        provider.fetchSongsFromFirebase()
         let songsVM = SongListViewModel(delegate: vc)
         vc.viewModel = songsVM
         let dataSource = SongListTableViewDataSource(with: songsVM)
