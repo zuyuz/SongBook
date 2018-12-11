@@ -13,6 +13,7 @@ class SongListViewModel {
     private var songs: [SongModel] = [] {
         didSet {
             delegate?.updateUI()
+            lastSongId = songsCount
         }
     }
     
@@ -20,15 +21,30 @@ class SongListViewModel {
         return songs.count
     }
     
+    private var lastSongId: Int = 0
+    
+    private let dataProvider: SongDataProvider
+    
     private weak var delegate: IUIUpdatable?
     
-    init(delegate: IUIUpdatable) {
+    init(delegate: IUIUpdatable, dataProvider: SongDataProvider) {
         self.delegate = delegate
+        self.dataProvider = dataProvider
         NotificationCenter.default.addObserver(self, selector: #selector(handleContextDidSaveReceivedData(notification:)), name: .NSManagedObjectContextDidSave, object: nil)
     }
     
     deinit {
         NotificationCenter.default.removeObserver(self, name: .NSManagedObjectContextDidSave, object: nil)
+    }
+    
+    func addNewSong(_ song: SongModel) {
+        if song.author == "" {
+            song.author = "Unknown author"
+        }
+        
+        song.id = lastSongId + 1
+        
+        dataProvider.add(song)
     }
     
     func song(at indexPath: IndexPath) -> SongModel? {

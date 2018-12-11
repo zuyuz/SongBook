@@ -27,6 +27,14 @@ class SongDataProvider {
         })
     }
     
+    func add(_ song: SongModel) {
+        let ref = Database.database().reference().root.child("songs").child(String(song.id))
+        ref.setValue(["title": song.title,
+                      "author": song.author,
+                      "lyrics": song.lyrics])
+        SongProxy().addSong(song)
+    }
+    
     private func parseSongs(from snapshot: DataSnapshot) -> [SongData] {
         var songs: [SongData] = []
         for index in 1...snapshot.childrenCount {

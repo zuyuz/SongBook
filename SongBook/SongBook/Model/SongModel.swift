@@ -10,10 +10,10 @@ import Foundation
 
 class SongModel {
     
-    let id: Int
-    let title: String
-    let author: String
-    let lyrics: String
+    var id: Int
+    var title: String
+    var author: String
+    var lyrics: String
     
     init(id: Int, title: String, author: String, lyrics: String) {
         self.id = id

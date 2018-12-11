@@ -20,7 +20,7 @@ class SongView: UIView {
     private var cancelButton: UIButton!
     
     var cancelSong: (() -> Void)?
-    var saveSong: ((SongModel) -> Void)?
+    var saveSong: ((SongModel, String?) -> Void)?
     
     func setupSubviews() {
         backgroundColor = .white
@@ -40,6 +40,7 @@ class SongView: UIView {
         titleTextField.text = songModel.title
         authorTextField.text = songModel.author
         lyricsTextView.text = songModel.lyrics
+        saveButton.setTitle("Save", for: .normal)
     }
     
     private func addTitleLabel() {
@@ -167,7 +168,7 @@ class SongView: UIView {
         guard saveButton == nil else { return }
         let button = UIButton(type: .system)
         let radius: CGFloat = 4.0
-        button.setTitle("Save", for: .normal)
+        button.setTitle("Create", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = UIColor(red: 30.0 / 255.0, green: 144.0 / 255.0, blue: 255, alpha: 1.0)
         button.layer.cornerRadius = radius
@@ -210,6 +211,6 @@ class SongView: UIView {
     
     @objc private func saveButtonClicked(_ sender: UIButton) {
         let song = SongModel(id: 0, title: titleTextField.text ?? "", author: authorTextField.text ?? "", lyrics: lyricsTextView.text)
-        saveSong?(song)
+        saveSong?(song, sender.titleLabel?.text)
     }
 }
