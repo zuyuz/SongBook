@@ -18,6 +18,24 @@ class SongProxy: BaseCoreDataProxy {
         return questions
     }
     
+    func addSongs(from array: [SongData]) {
+        let container = self.persistentContainer
+        container.performBackgroundTask() { (context) in
+            self.deleteOldRecords(from: context)
+            
+            for item in array {
+                let song = self.fetchSong(by: item.id, from: context) ?? Song(context: context)
+                song.id = Int32(item.id)
+                song.title = item.title
+                song.author = item.author
+                song.lyrics = item.lyrics
+            }
+            
+            do { try context.save() }
+            catch { NSLog("Failed to save context: \(error)") }
+        }
+    }
+    
     private func deleteOldRecords(from context: NSManagedObjectContext) {
         let request: NSFetchRequest<Song> = Song.fetchRequest()
         do {
@@ -29,7 +47,7 @@ class SongProxy: BaseCoreDataProxy {
         }
     }
     
-    private func fetchQuestion(by id: Int, from context: NSManagedObjectContext) -> Song? {
+    private func fetchSong(by id: Int, from context: NSManagedObjectContext) -> Song? {
         let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: EntityConstants.song)
         fetch.predicate = NSPredicate(format: "id == \(id)")
         var fetchedSongs = [Song]()
