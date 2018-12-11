@@ -18,6 +18,7 @@
 		D4258A9321BFB448001C2E38 /* BaseCoreDataProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4258A9221BFB448001C2E38 /* BaseCoreDataProxy.swift */; };
 		D4258A9521BFB4E5001C2E38 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4258A9421BFB4E5001C2E38 /* CoreDataManager.swift */; };
 		D4258A9721BFB544001C2E38 /* SongProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4258A9621BFB544001C2E38 /* SongProxy.swift */; };
+		D4258A9A21BFB75A001C2E38 /* SongDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4258A9921BFB75A001C2E38 /* SongDataProvider.swift */; };
 		D4357A7721A99F94003EA666 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4357A7621A99F94003EA666 /* AppDelegate.swift */; };
 		D4357A7921A99F94003EA666 /* SongListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4357A7821A99F94003EA666 /* SongListViewController.swift */; };
 		D4357A7F21A99F95003EA666 /* SongBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4357A7D21A99F95003EA666 /* SongBook.xcdatamodeld */; };
@@ -44,6 +45,7 @@
 		D4258A9221BFB448001C2E38 /* BaseCoreDataProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoreDataProxy.swift; sourceTree = "<group>"; };
 		D4258A9421BFB4E5001C2E38 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		D4258A9621BFB544001C2E38 /* SongProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongProxy.swift; sourceTree = "<group>"; };
+		D4258A9921BFB75A001C2E38 /* SongDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDataProvider.swift; sourceTree = "<group>"; };
 		D4357A7321A99F94003EA666 /* SongBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SongBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4357A7621A99F94003EA666 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4357A7821A99F94003EA666 /* SongListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,14 @@
 			path = Proxy;
 			sourceTree = "<group>";
 		};
+		D4258A9821BFB713001C2E38 /* DataProviders */ = {
+			isa = PBXGroup;
+			children = (
+				D4258A9921BFB75A001C2E38 /* SongDataProvider.swift */,
+			);
+			path = DataProviders;
+			sourceTree = "<group>";
+		};
 		D4357A6A21A99F94003EA666 = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +204,7 @@
 		D4357A8F21A9BBC7003EA666 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				D4258A9821BFB713001C2E38 /* DataProviders */,
 				D4258A9121BFB3DE001C2E38 /* Proxy */,
 				D4357A7D21A99F95003EA666 /* SongBook.xcdatamodeld */,
 				D4258A9421BFB4E5001C2E38 /* CoreDataManager.swift */,
@@ -322,14 +333,18 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SongBook/Pods-SongBook-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,6 +392,7 @@
 				D414499721BEA995005FDB67 /* SongListTableViewDataSource.swift in Sources */,
 				D4357A9521A9BD1F003EA666 /* InitializableViewController.swift in Sources */,
 				D414499921BEAB17005FDB67 /* SongListBuilder.swift in Sources */,
+				D4258A9A21BFB75A001C2E38 /* SongDataProvider.swift in Sources */,
 				D4357A7721A99F94003EA666 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,10 +536,7 @@
 				DEVELOPMENT_TEAM = A5GU43C3YM;
 				INFOPLIST_FILE = "$(SRCROOT)/SongBook/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mrrrnyaaa.SongBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -540,10 +553,7 @@
 				DEVELOPMENT_TEAM = A5GU43C3YM;
 				INFOPLIST_FILE = "$(SRCROOT)/SongBook/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mrrrnyaaa.SongBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
