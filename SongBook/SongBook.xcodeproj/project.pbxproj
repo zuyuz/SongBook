@@ -17,6 +17,7 @@
 		D4258A9021BFAF55001C2E38 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4258A8F21BFAF55001C2E38 /* String+Extension.swift */; };
 		D4258A9321BFB448001C2E38 /* BaseCoreDataProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4258A9221BFB448001C2E38 /* BaseCoreDataProxy.swift */; };
 		D4258A9521BFB4E5001C2E38 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4258A9421BFB4E5001C2E38 /* CoreDataManager.swift */; };
+		D4258A9721BFB544001C2E38 /* SongProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4258A9621BFB544001C2E38 /* SongProxy.swift */; };
 		D4357A7721A99F94003EA666 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4357A7621A99F94003EA666 /* AppDelegate.swift */; };
 		D4357A7921A99F94003EA666 /* SongListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4357A7821A99F94003EA666 /* SongListViewController.swift */; };
 		D4357A7F21A99F95003EA666 /* SongBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4357A7D21A99F95003EA666 /* SongBook.xcdatamodeld */; };
@@ -42,6 +43,7 @@
 		D4258A8F21BFAF55001C2E38 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		D4258A9221BFB448001C2E38 /* BaseCoreDataProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoreDataProxy.swift; sourceTree = "<group>"; };
 		D4258A9421BFB4E5001C2E38 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		D4258A9621BFB544001C2E38 /* SongProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongProxy.swift; sourceTree = "<group>"; };
 		D4357A7321A99F94003EA666 /* SongBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SongBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4357A7621A99F94003EA666 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4357A7821A99F94003EA666 /* SongListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				D4258A9221BFB448001C2E38 /* BaseCoreDataProxy.swift */,
+				D4258A9621BFB544001C2E38 /* SongProxy.swift */,
 			);
 			path = Proxy;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				D414499021BEA674005FDB67 /* SongListViewModel.swift in Sources */,
 				D4357A7F21A99F95003EA666 /* SongBook.xcdatamodeld in Sources */,
 				D4357A7921A99F94003EA666 /* SongListViewController.swift in Sources */,
+				D4258A9721BFB544001C2E38 /* SongProxy.swift in Sources */,
 				D4258A9521BFB4E5001C2E38 /* CoreDataManager.swift in Sources */,
 				D414499C21BEB96C005FDB67 /* SongView.swift in Sources */,
 				D4258A9321BFB448001C2E38 /* BaseCoreDataProxy.swift in Sources */,
