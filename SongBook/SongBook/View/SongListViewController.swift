@@ -14,27 +14,45 @@ class SongListViewController: InitializableViewController {
     
     var tableView: UITableView!
     var tableDataSource: SongListTableViewDataSource!
+    var tableDelegate: SongListTableViewDelegate!
     
     var viewModel: SongListViewModel!
     
     private var songView: SongView?
     
-    lazy var uiInilializer: SongListInitializer = { [unowned self] in
+    private lazy var uiInilializer: SongListInitializer = { [unowned self] in
         let initializer = SongListInitializer(viewController: self)
         return initializer
     }()
     
-    lazy var cancelSong: (() -> Void) = { [weak self] in
+    private lazy var cancelSong: (() -> Void) = { [weak self] in
         self?.songView?.removeFromSuperview()
         self?.songView = nil
         self?.showNavigationBar()
     }
     
-    lazy var saveSong: ((SongModel, String?) -> Void) = { [weak self] song, buttonTitle in
+    private lazy var saveSong: ((SongModel, String?) -> Void) = { [weak self] song, buttonTitle in
         guard let check = self?.validate(song) else { return }
         if check {
             buttonTitle == "Create" ? self?.create(song) : self?.save(song)
         }
+    }
+    
+    private lazy var chooseSong:((Int) -> Void) = { [weak self] number in
+        guard let chosenSong = self?.viewModel.song(at: number) else { return }
+        self?.showActionSheet(for: chosenSong)
+    }
+    
+    private lazy var editSong: ((SongModel) -> Void) = { [weak self] song in
+        
+    }
+    
+    private lazy var deleteSong: ((SongModel) -> Void) = { [weak self] song in
+        
+    }
+    
+    private lazy var downloadSong: ((SongModel) -> Void) = { [weak self] song in
+        
     }
     
     override func viewDidLoad() {
@@ -42,6 +60,8 @@ class SongListViewController: InitializableViewController {
         uiInilializer.initialize()
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addSongButtonClicked(_:)))
         tableView.dataSource = tableDataSource
+        tableView.delegate = tableDelegate
+        tableDelegate.chooseSong = chooseSong
         viewModel.loadSongsFromCoreData()
     }
     
@@ -82,6 +102,24 @@ class SongListViewController: InitializableViewController {
         }
         
         return true
+    }
+    
+    private func showActionSheet(for song: SongModel) {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let editSongAction = UIAlertAction(title: "Edit", style: .default, handler: { _ in
+            self.editSong(song)})
+        let downloadSongAction = UIAlertAction(title: "Download", style: .default, handler: { _ in
+            self.downloadSong(song)})
+        let deleteSongAction = UIAlertAction(title: "Delete", style: .destructive, handler: { _ in
+            self.deleteSong(song)})
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alert.addAction(editSongAction)
+        alert.addAction(downloadSongAction)
+        alert.addAction(deleteSongAction)
+        alert.addAction(cancelAction)
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     private func hideNavigationBar() {

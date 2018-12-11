@@ -52,6 +52,11 @@ class SongListViewModel {
         return songs[indexPath.row]
     }
     
+    func song(at position: Int) -> SongModel? {
+        guard songsCount > 0 else { return nil }
+        return songs[position]
+    }
+    
     func loadSongsFromCoreData() {
         let dbSongs = SongProxy().fetchSongs()
         var rows: [SongModel] = []
