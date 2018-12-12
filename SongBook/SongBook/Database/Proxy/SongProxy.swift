@@ -50,6 +50,20 @@ class SongProxy: BaseCoreDataProxy {
         }
     }
     
+    func updateSong(_ song: SongModel, with newSong: SongModel) {
+        let container = self.persistentContainer
+        container.performBackgroundTask() { (context) in
+            let song = self.fetchSong(by: song.id, from: context) ?? Song(context: context)
+            song.id = Int32(newSong.id)
+            song.title = newSong.title
+            song.author = newSong.author
+            song.lyrics = newSong.lyrics
+            
+            do { try context.save() }
+            catch { NSLog("Failed to save context: \(error)") }
+        }
+    }
+    
     private func deleteOldRecords(from context: NSManagedObjectContext) {
         let request: NSFetchRequest<Song> = Song.fetchRequest()
         do {

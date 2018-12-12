@@ -47,6 +47,14 @@ class SongListViewModel {
         dataProvider.add(song)
     }
     
+    func updateSong(_ song: SongModel) {
+        for item in songs {
+            if item.id == song.id {
+                dataProvider.update(item, with: song)
+            }
+        }
+    }
+    
     func song(at indexPath: IndexPath) -> SongModel? {
         guard songsCount > 0 else { return nil }
         return songs[indexPath.row]

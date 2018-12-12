@@ -19,6 +19,8 @@ class SongView: UIView {
     private var saveButton: UIButton!
     private var cancelButton: UIButton!
     
+    private var songId: Int?
+    
     var cancelSong: (() -> Void)?
     var saveSong: ((SongModel, String?) -> Void)?
     
@@ -41,6 +43,7 @@ class SongView: UIView {
         authorTextField.text = songModel.author
         lyricsTextView.text = songModel.lyrics
         saveButton.setTitle("Save", for: .normal)
+        songId = songModel.id
     }
     
     private func addTitleLabel() {
@@ -210,7 +213,12 @@ class SongView: UIView {
     }
     
     @objc private func saveButtonClicked(_ sender: UIButton) {
-        let song = SongModel(id: 0, title: titleTextField.text ?? "", author: authorTextField.text ?? "", lyrics: lyricsTextView.text)
+        var id = 0
+        if let currentSongId = songId {
+            id = currentSongId
+        }
+        
+        let song = SongModel(id: id, title: titleTextField.text ?? "", author: authorTextField.text ?? "", lyrics: lyricsTextView.text)
         saveSong?(song, sender.titleLabel?.text)
     }
 }

@@ -31,7 +31,7 @@ class SongListViewController: InitializableViewController {
         self?.showNavigationBar()
     }
     
-    private lazy var saveSong: ((SongModel, String?) -> Void) = { [weak self] song, buttonTitle in
+    private lazy var updateSong: ((SongModel, String?) -> Void) = { [weak self] song, buttonTitle in
         guard let check = self?.validate(song) else { return }
         if check {
             buttonTitle == "Create" ? self?.create(song) : self?.save(song)
@@ -44,7 +44,8 @@ class SongListViewController: InitializableViewController {
     }
     
     private lazy var editSong: ((SongModel) -> Void) = { [weak self] song in
-        
+        self?.showSongView()
+        self?.songView?.configure(with: song)
     }
     
     private lazy var deleteSong: ((SongModel) -> Void) = { [weak self] song in
@@ -66,11 +67,11 @@ class SongListViewController: InitializableViewController {
     }
     
     @objc func addSongButtonClicked(_ sender: UIButton) {
-        hideNavigationBar()
         showSongView()
     }
     
     private func showSongView() {
+        hideNavigationBar()
         songView = SongView()
         guard songView != nil else { return }
         self.view.addSubview(songView!)
@@ -83,7 +84,7 @@ class SongListViewController: InitializableViewController {
         
         songView!.setupSubviews()
         songView!.cancelSong = cancelSong
-        songView!.saveSong = saveSong
+        songView!.saveSong = updateSong
         self.view.bringSubviewToFront(songView!)
         songView!.titleTextField.becomeFirstResponder()
     }
@@ -131,12 +132,17 @@ class SongListViewController: InitializableViewController {
     }
     
     private func save(_ song: SongModel) {
-        
+        viewModel.updateSong(song)
+        removeSongView()
     }
     
     private func create(_ song: SongModel) {
-        guard songView != nil else { return }
         viewModel.addNewSong(song)
+        removeSongView()
+    }
+    
+    private func removeSongView() {
+        guard songView != nil else { return }
         songView!.removeFromSuperview()
         songView = nil
         showNavigationBar()
