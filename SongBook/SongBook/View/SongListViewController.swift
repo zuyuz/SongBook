@@ -34,10 +34,9 @@ class SongListViewController: InitializableViewController {
     private lazy var updateSong: ((SongModel, String?) -> Void) = { [weak self] song, buttonTitle in
         guard let check = self?.validate(song) else { return }
         if check {
-            buttonTitle == "Create" ? self?.create(song) : self?.save(song)
+            buttonTitle == "Create" ? self?.create(song) : self?.update(song)
         }
     }
-    
     private lazy var chooseSong:((Int) -> Void) = { [weak self] number in
         guard let chosenSong = self?.viewModel.song(at: number) else { return }
         self?.showActionSheet(for: chosenSong)
@@ -49,7 +48,7 @@ class SongListViewController: InitializableViewController {
     }
     
     private lazy var deleteSong: ((SongModel) -> Void) = { [weak self] song in
-        
+        self?.delete(song)
     }
     
     private lazy var downloadSong: ((SongModel) -> Void) = { [weak self] song in
@@ -131,7 +130,7 @@ class SongListViewController: InitializableViewController {
         self.navigationController?.isNavigationBarHidden = false
     }
     
-    private func save(_ song: SongModel) {
+    private func update(_ song: SongModel) {
         viewModel.updateSong(song)
         removeSongView()
     }
@@ -139,6 +138,11 @@ class SongListViewController: InitializableViewController {
     private func create(_ song: SongModel) {
         viewModel.addNewSong(song)
         removeSongView()
+    }
+    
+    private func delete(_ song: SongModel) {
+        viewModel.deleteSong(song)
+        showToast(message: "Song deleted")
     }
     
     private func removeSongView() {
@@ -168,5 +172,24 @@ extension SongListViewController: IUIUpdatable {
     func removeSpinner() {
         spinner?.stopAnimating()
         spinner?.removeFromSuperview()
+    }
+}
+
+extension SongListViewController {
+    func showToast(message : String) {
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 75, y: self.view.frame.size.height-100, width: 150, height: 35))
+        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        toastLabel.textColor = UIColor.white
+        toastLabel.textAlignment = .center;
+        toastLabel.text = message
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 10;
+        toastLabel.clipsToBounds  =  true
+        self.view.addSubview(toastLabel)
+        UIView.animate(withDuration: 4.0, delay: 0.1, options: .curveEaseOut, animations: {
+            toastLabel.alpha = 0.0
+        }, completion: {(isCompleted) in
+            toastLabel.removeFromSuperview()
+        })
     }
 }
