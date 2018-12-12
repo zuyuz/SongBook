@@ -52,7 +52,7 @@ class SongListViewController: InitializableViewController {
     }
     
     private lazy var downloadSong: ((SongModel) -> Void) = { [weak self] song in
-        
+        self?.download(song)
     }
     
     override func viewDidLoad() {
@@ -145,6 +145,19 @@ class SongListViewController: InitializableViewController {
         showToast(message: "Song deleted")
     }
     
+    private func download(_ song: SongModel) {
+        let text = "\(song.title)\n\(song.author)\n\n\(song.lyrics)"
+        do {
+            let fileUrl = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("\(song.title).txt")
+            try text.write(to: fileUrl, atomically: true, encoding: .utf8)
+        }
+        catch {
+            NSLog("An error occured whie downloading song files: \(error)")
+        }
+        
+        showToast(message: "1 song will be downloaded")
+    }
+    
     private func removeSongView() {
         guard songView != nil else { return }
         songView!.removeFromSuperview()
@@ -177,7 +190,7 @@ extension SongListViewController: IUIUpdatable {
 
 extension SongListViewController {
     func showToast(message : String) {
-        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 75, y: self.view.frame.size.height-100, width: 150, height: 35))
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width * 0.064, y: self.view.frame.size.height-100, width: self.view.frame.width * 0.872, height: 35))
         toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         toastLabel.textColor = UIColor.white
         toastLabel.textAlignment = .center;
