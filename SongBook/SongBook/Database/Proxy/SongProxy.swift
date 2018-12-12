@@ -11,11 +11,11 @@ import CoreData
 class SongProxy: BaseCoreDataProxy {
 
     func fetchSongs() -> [Song] {
-        guard let questions = executeFetchRequest(NSFetchRequest<NSFetchRequestResult>(entityName: EntityConstants.song)) as? [Song] else {
+        guard let songs = executeFetchRequest(NSFetchRequest<NSFetchRequestResult>(entityName: EntityConstants.song)) as? [Song] else {
             return []
         }
         
-        return questions
+        return songs
     }
     
     func addSongs(from array: [SongData]) {
@@ -59,6 +59,16 @@ class SongProxy: BaseCoreDataProxy {
             song.author = newSong.author
             song.lyrics = newSong.lyrics
             
+            do { try context.save() }
+            catch { NSLog("Failed to save context: \(error)") }
+        }
+    }
+    
+    func deleteSong(_ song: SongModel) {
+        let container = self.persistentContainer
+        container.performBackgroundTask() { (context) in
+            let song = self.fetchSong(by: song.id, from: context) ?? Song(context: context)
+            context.delete(song)
             do { try context.save() }
             catch { NSLog("Failed to save context: \(error)") }
         }

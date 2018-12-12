@@ -43,6 +43,12 @@ class SongDataProvider {
         SongProxy().updateSong(song, with: newSong)
     }
     
+    func delete(_ song: SongModel) {
+        let ref = Database.database().reference().root.child("songs").child(String(song.id))
+        ref.removeValue()
+        SongProxy().deleteSong(song)
+    }
+    
     private func parseSongs(from snapshot: DataSnapshot) -> [SongData] {
         var songs: [SongData] = []
         for index in 1...snapshot.childrenCount {

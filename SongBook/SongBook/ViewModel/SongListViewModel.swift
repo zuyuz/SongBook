@@ -55,6 +55,14 @@ class SongListViewModel {
         }
     }
     
+    func deleteSong(_ song: SongModel) {
+        for item in songs {
+            if item.id == song.id {
+                dataProvider.delete(song)
+            }
+        }
+    }
+    
     func song(at indexPath: IndexPath) -> SongModel? {
         guard songsCount > 0 else { return nil }
         return songs[indexPath.row]
