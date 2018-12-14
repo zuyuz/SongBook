@@ -10,4 +10,6 @@ target 'SongBook' do
     pod 'Firebase/Core'
     pod 'Firebase/Database'
     pod 'Firebase/Storage'
+    pod 'Fabric'
+    pod 'Crashlytics'
 end

@@ -1,4 +1,7 @@
 PODS:
+  - Crashlytics (3.12.0):
+    - Fabric (~> 1.9.0)
+  - Fabric (1.9.0)
   - Firebase/Core (5.14.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 5.4.0)
@@ -68,6 +71,8 @@ PODS:
   - SnapKit (4.2.0)
 
 DEPENDENCIES:
+  - Crashlytics
+  - Fabric
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
@@ -75,6 +80,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Crashlytics
+    - Fabric
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuthInterop
@@ -90,6 +97,8 @@ SPEC REPOS:
     - SnapKit
 
 SPEC CHECKSUMS:
+  Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
+  Fabric: f988e33c97f08930a413e08123064d2e5f68d655
   Firebase: 963d5685fae888a56d6d4d9cfce6b9c976958798
   FirebaseAnalytics: c06f9d70577d79074214700a71fd5d39de5550fb
   FirebaseAuthInterop: 0ffa57668be100582bb7643d4fcb7615496c41fc
@@ -104,6 +113,6 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
-PODFILE CHECKSUM: 76d9c3aad6f8bc34220e31ed17d1413bd09ffd14
+PODFILE CHECKSUM: 4257da30d1e3fe8a9f041e4d859b6b14b618d53c
 
 COCOAPODS: 1.5.3
