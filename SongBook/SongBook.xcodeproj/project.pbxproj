@@ -343,7 +343,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SongBook/Pods-SongBook-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SongBook/Pods-SongBook-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -360,7 +360,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SongBook/Pods-SongBook-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SongBook/Pods-SongBook-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C50278D5E2E4153B862E6380 /* [CP] Check Pods Manifest.lock */ = {

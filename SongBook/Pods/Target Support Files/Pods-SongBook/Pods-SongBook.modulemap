@@ -1,0 +1,6 @@
+framework module Pods_SongBook {
+  umbrella header "Pods-SongBook-umbrella.h"
+
+  export *
+  module * { export * }
+}
