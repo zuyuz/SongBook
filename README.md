@@ -31,3 +31,6 @@ Our application may be uploaded to the AppStore.
 
 ## Monitoring & Telemetery
 We use Firebase Analytics and Crashlytics to monitor database, cloud functions and app usage and also to receive detailed reports of the errors in your SongBook application. You can find screenshots in the /Analytics folder.
+
+## Songbook prototypes
+Songbook prototypes are created by using [Marvel](https://marvelapp.com) and can be reviewed [here](https://marvelapp.com/ba82087).
