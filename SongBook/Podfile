@@ -11,3 +11,14 @@ target 'SongBook' do
     pod 'Firebase/Database'
     pod 'Firebase/Storage'
 end
+target ‘SongBookUnitTests’ do
+ inherit! :search_paths
+ # Pods for testing
+ pod 'Firebase/Core'
+    pod 'Firebase/Database'
+    pod 'Firebase/Storage'
+ end
+target ‘SongBookUITests’ do
+ inherit! :search_paths
+ # Pods for testing
+ end
