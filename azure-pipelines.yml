@@ -10,16 +10,10 @@ pool:
   vmImage: 'macOS-10.13'
 
 steps:
-- script: /usr/local/bin/pod install
-  displayName: 'pod install using a script'
-
-- task: CocoaPods@0
-  displayName: 'pod install using the CocoaPods task with defaults'
-
 - task: CocoaPods@0
   inputs:
     forceRepoUpdate: true
-    projectDirectory: '$(system.defaultWorkingDirectory)'
+    projectDirectory: '$(system.defaultWorkingDirectory)/SongBook'
   displayName: 'pod install using the CocoaPods task with a forced repo update and a custom project directory'
 
 - task: Xcode@5
