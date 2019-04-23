@@ -1,5 +1,7 @@
 # SongBook
 
+[![Build Status](https://dev.azure.com/mrnyaaa/Songbook/_apis/build/status/zuyuz.SongBook?branchName=master)](https://dev.azure.com/mrnyaaa/Songbook/_build/latest?definitionId=1&branchName=master)
+
 ## Description
 Application that allows you to create your own songbook easily. 
 You can write your own songs, collect and store favorite lyrics, choose the fanciest design and print them out.
