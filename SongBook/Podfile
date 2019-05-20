@@ -10,6 +10,8 @@ target 'SongBook' do
     pod 'Firebase/Core'
     pod 'Firebase/Database'
     pod 'Firebase/Storage'
+    pod 'FirebaseUI'
+    pod 'Firebase'
 end
 target ‘SongBookUnitTests’ do
  inherit! :search_paths
