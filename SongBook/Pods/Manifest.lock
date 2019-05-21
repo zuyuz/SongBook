@@ -180,10 +180,13 @@ PODS:
 
 DEPENDENCIES:
   - Firebase
+  - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
   - FirebaseUI
+  - FirebaseUI/Auth
+  - FirebaseUI/Phone
   - SnapKit
 
 SPEC REPOS:
@@ -241,6 +244,6 @@ SPEC CHECKSUMS:
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
 
-PODFILE CHECKSUM: aa12af7f1a430b61e9a04de0c23c7b159518f470
+PODFILE CHECKSUM: d063f6462ec595db09b21d9214cfd1f1212eeb44
 
 COCOAPODS: 1.6.1
