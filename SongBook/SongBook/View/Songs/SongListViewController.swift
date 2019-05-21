@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import FirebaseUI
 
 class SongListViewController: InitializableViewController {
     
@@ -15,6 +18,8 @@ class SongListViewController: InitializableViewController {
     var tableView: UITableView!
     var tableDataSource: SongListTableViewDataSource!
     var tableDelegate: SongListTableViewDelegate!
+    
+    var logoutButton: UIButton!
     
     var viewModel: SongListViewModel!
     
@@ -63,10 +68,21 @@ class SongListViewController: InitializableViewController {
         tableView.delegate = tableDelegate
         tableDelegate.chooseSong = chooseSong
         viewModel.loadSongsFromCoreData()
+        logoutButton.addTarget(self, action: #selector(logoutButtonClicked(_:)), for: .touchUpInside)
     }
     
     @objc func addSongButtonClicked(_ sender: UIButton) {
         showSongView()
+    }
+    
+    @objc func logoutButtonClicked(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            SongBookNavigationHandler().showLoginFlow()
+        } catch let signoutError as NSError {
+            debugPrint("Error signing out: \(signoutError)")
+        }
     }
     
     private func showSongView() {

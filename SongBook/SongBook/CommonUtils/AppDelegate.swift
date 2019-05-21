@@ -15,15 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         FirebaseApp.configure()
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        let vc = SongListBuilder().createController()
-        window?.rootViewController = UINavigationController(rootViewController: vc)
-        window?.makeKeyAndVisible()
+        AppUIInitializer().initialize()
         
         return true
     }
@@ -97,5 +94,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        Auth.auth().setAPNSToken(deviceToken, type: .prod)
+    }
 }
 
